@@ -10,16 +10,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print OS Runner Type
-        run: Write-Output "OS Runner Type: ${{ runner.os }}"
+        run: |
+          Write-Output "OS Runner Type: ${{ runner.os }}"
 
       - name: Print Triggering Event Name
-        run: Write-Output "Event Name: ${{ github.event_name }}"
+        run: |
+          Write-Output "Event Name: ${{ github.event_name }}"
 
       - name: Print Branch Name
-        run: Write-Output "Branch Name: ${{ github.ref_name }}"
+        run: |
+          Write-Output "Branch Name: ${{ github.ref_name }}"
 
       - name: Print Repository Name
-        run: Write-Output "Repository Name: ${{ github.repository }}"
+        run: |
+          Write-Output "Repository Name: ${{ github.repository }}"
 
       - name: List All Files in Workspace
-        run: Get-ChildItem -Recurse
+        run: |
+          Get-ChildItem -Recurse
